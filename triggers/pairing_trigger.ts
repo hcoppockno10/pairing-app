@@ -9,7 +9,7 @@ const trigger: Trigger<typeof PairingWorkflow.definition> = {
   workflow: `#/workflows/${PairingWorkflow.definition.callback_id}`,
   inputs: {
     channel: {
-      value: `C07JLK4K3QC`,
+      value: `C06EB23UCP5`,
     },
   },
   schedule: {
