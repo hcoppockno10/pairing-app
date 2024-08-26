@@ -5,7 +5,7 @@ import { CustomMessage } from "../functions/custom_message.ts";
 const PairingWorkflow = DefineWorkflow({
   callback_id: "pairing_workflow",
   title: "Pairing workflow",
-  description: "A workflow to ask users if they want to pair",
+  description: "A workflow to create random pairings between users",
   input_parameters: {
     properties: {
       interactivity: {
