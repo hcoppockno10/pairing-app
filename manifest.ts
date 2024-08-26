@@ -10,9 +10,9 @@ import SampleObjectDatastore from "./datastores/sample_datastore.ts";
  */
 export default Manifest({
   name: "pairing-app",
-  description: "A template for building Slack apps with Deno",
+  description: "An app to manage pairing individuals from a team.",
   icon: "assets/pear.png",
-  workflows: [PairingGetResponseWorkflow],
+  workflows: [PairingGetResponseWorkflow, PairingWorkflow],
   outgoingDomains: [],
   datastores: [SampleObjectDatastore],
   botScopes: [
