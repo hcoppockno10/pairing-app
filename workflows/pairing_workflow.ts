@@ -19,7 +19,22 @@ const PairingWorkflow = DefineWorkflow({
 
 const pairingAnnouncementStep = PairingWorkflow.addStep(Schema.slack.functions.SendMessage, {
   channel_id: PairingWorkflow.inputs.channel,
-  message: "React to this message with a :pear: if you would like to be paired with someone else in i.AI for a 1:1 this week. In 12 hours, we will randomly pair everyone who reacted with a :pear:. If you reacted with a :pear:, but later decide you no longer have the time to pair, please react with an :apple: to remove yourself from the list.",
+  message: `
+:pear: *Pairing Opportunity Alert!* :pear:
+
+Attention i.AI team members! It's time for our weekly pairing session!
+
+*How to participate:*
+1. :eyes: See this message
+2. React with a :pear: if you're interested
+3. :hourglass_flowing_sand: Wait 12 hours for the magic to happen
+4.Get :pear:ed with a random teammate
+
+*Changed your mind?*
+No worries! Just react with an :apple: to opt-out.
+
+Let's connect, collaborate, and create something amazing together! :rocket:
+  `.trim(),
 });
 
 const delayStep = PairingWorkflow.addStep(Schema.slack.functions.Delay, {
