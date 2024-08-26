@@ -51,7 +51,9 @@ const pairingFunctionStep = PairingWorkflow.addStep(PairingFunctionDefinition, {
   channel: pairingForm.outputs.fields.channel,
 });
 
-
+const delayStep = PairingWorkflow.addStep(Schema.slack.functions.Delay, {
+  minutes_to_delay: 1,
+});
 const customMessageStep = PairingWorkflow.addStep(CustomMessage, {
   channel: pairingForm.outputs.fields.channel,
 });

@@ -59,7 +59,7 @@ export default SlackFunction(
           message = "There was an error processing your request. Please try again later.";
         } else {
           console.log(`User ${inputs.user} saved for pairing.`);
-          message = "Your request to be :pear:'d has been successfully logged. You will be :pear:'d with a random user tomorrow morning.";
+          message = "Your request to be :pear:'d has been successfully logged. You will be notified of your partner tomorrow morning.";
         }
       } catch (error) {
         console.error(`Error in Pairing function: ${error}`);
@@ -96,7 +96,7 @@ export default SlackFunction(
           console.error(`Failed to query datastore: ${queryResponse.error}`);
         }
 
-        message = "You have opted out of pairing for this week. If you change your mind, feel free to run this workflow again.";
+        message = "You have opted out of :pear:ing for this week.";
       } catch (error) {
         console.error(`Error removing user entries: ${error}`);
         message = "There was an error processing your request, but you have been opted out of pairing. Please try again later if you want to opt back in.";
