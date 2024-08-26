@@ -38,10 +38,9 @@ Let's connect, collaborate, and create something amazing together! :rocket:
 });
 
 const delayStep = PairingWorkflow.addStep(Schema.slack.functions.Delay, {
-  minutes_to_delay: 1,
+  minutes_to_delay: 5,
 });
 
-console.log(JSON.stringify(pairingAnnouncementStep.outputs, null, 2));
 const customMessageStep = PairingWorkflow.addStep(CustomMessage, {
   channel: PairingWorkflow.inputs.channel,
   message_ts: pairingAnnouncementStep.outputs.message_context.message_ts,

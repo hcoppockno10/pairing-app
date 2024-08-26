@@ -1,1 +1,10 @@
-{}
+{
+  "apps": {
+    "T03DR9CLDHP": {
+      "app_id": "A07JKLY1CUS",
+      "team_domain": "i-dot-ai",
+      "team_id": "T03DR9CLDHP"
+    }
+  },
+  "default": "i-dot-ai"
+}
