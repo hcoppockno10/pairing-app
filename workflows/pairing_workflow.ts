@@ -25,8 +25,11 @@ const pairingAnnouncementStep = PairingWorkflow.addStep(Schema.slack.functions.S
 const delayStep = PairingWorkflow.addStep(Schema.slack.functions.Delay, {
   minutes_to_delay: 1,
 });
+
+console.log(JSON.stringify(pairingAnnouncementStep.outputs, null, 2));
 const customMessageStep = PairingWorkflow.addStep(CustomMessage, {
-  channel: PairingWorkflow.inputs.channel
+  channel: PairingWorkflow.inputs.channel,
+  message_ts: pairingAnnouncementStep.outputs.message_context.message_ts,
 });
 
 const clearDatastoreStep = PairingWorkflow.addStep(ClearDatastoreFunctionDefinition, {});

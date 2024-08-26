@@ -12,8 +12,12 @@ export const CustomMessage = DefineFunction({
         type: Schema.slack.types.channel_id,
         description: "Channel where the event was triggered",
       },
+      message_ts: {
+        type: Schema.types.string,
+        description: "uuid of message to reply to",
+      },
     },
-    required: ["channel"],
+    required: ["channel", "message_ts"],
   },
   output_parameters: {
     properties: {
@@ -94,6 +98,7 @@ export default SlackFunction(CustomMessage, async ({ inputs, client }) => {
       const message = await client.chat.postMessage({
         channel: inputs.channel,
         text: text,
+        thread_ts: inputs.message_ts,
       });
       
       if (!message.ok) {
