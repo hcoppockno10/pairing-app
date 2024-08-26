@@ -1,5 +1,6 @@
 import { Manifest } from "deno-slack-sdk/mod.ts";
 import PairingWorkflow from "./workflows/pairing_workflow.ts";
+import PairingGetResponseWorkflow from "./workflows/pairing_getresponse_workflow.ts";
 import SampleObjectDatastore from "./datastores/sample_datastore.ts";
 
 /**
@@ -11,7 +12,7 @@ export default Manifest({
   name: "pairing-app",
   description: "A template for building Slack apps with Deno",
   icon: "assets/pear.png",
-  workflows: [PairingWorkflow],
+  workflows: [PairingGetResponseWorkflow],
   outgoingDomains: [],
   datastores: [SampleObjectDatastore],
   botScopes: [
@@ -20,5 +21,6 @@ export default Manifest({
     "chat:write.public",
     "datastore:read",
     "datastore:write",
+    "reactions:read",
   ],
 });
