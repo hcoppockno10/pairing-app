@@ -3,9 +3,6 @@ import { Trigger } from "deno-slack-sdk/types.ts";
 import PairingWorkflow from "../workflows/pairing_workflow.ts";
 import { TriggerContextData, TriggerTypes } from "deno-slack-api/mod.ts";
 
-/**
- * A trigger that periodically starts the pairing workflow.
- */
 const trigger: Trigger<typeof PairingWorkflow.definition> = {
   type: TriggerTypes.Scheduled,
   name: "Trigger a scheduled message to encourage users to pair",
@@ -16,11 +13,8 @@ const trigger: Trigger<typeof PairingWorkflow.definition> = {
     },
   },
   schedule: {
-    // Schedule the first execution 60 seconds from when the trigger is created
-    start_time: new Date(new Date().getTime() + 60000).toISOString(),
+    start_time: "2024-08-27T09:00:00Z",
     end_time: "2037-12-31T23:59:59Z",
-    frequency: { type: "hourly", repeats_every: 1 },
+    frequency: { type: "weekly", repeats_every: 1 },
   },
 };
-
-export default trigger;
