@@ -38,7 +38,7 @@ Let's connect, collaborate, and create something amazing together! :rocket:
 });
 
 const delayStep = PairingWorkflow.addStep(Schema.slack.functions.Delay, {
-  hours_to_delay: 12,
+  minutes_to_delay: 12 * 60,
 });
 
 const customMessageStep = PairingWorkflow.addStep(CustomMessage, {

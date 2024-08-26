@@ -18,3 +18,5 @@ const trigger: Trigger<typeof PairingWorkflow.definition> = {
     frequency: { type: "weekly", repeats_every: 1 },
   },
 };
+
+export default trigger;
