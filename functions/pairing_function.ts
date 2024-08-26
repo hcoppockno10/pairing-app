@@ -8,20 +8,24 @@ export const PairingFunctionDefinition = DefineFunction({
   source_file: "functions/pairing_function.ts",
   input_parameters: {
     properties: {
-      want_to_pair: {
-        type: Schema.types.boolean,
-        description: "Whether the user wants to pair or not",
-      },
       user: {
         type: Schema.slack.types.user_id,
         description: "The user invoking the workflow",
       },
       channel: {
-        type: Schema.slack.types.channel_id,
+        type: Schema.slack.types.channel_id,  
         description: "The channel to send the ephemeral message to",
-      }
+      },
+      reaction: {
+        type: Schema.types.string,
+        description: "The reaction to the message",
+      },
+      message_ts: {
+        type: Schema.types.string,
+        description: "The timestamp of the message",
+      },
     },
-    required: ["want_to_pair", "user", "channel"],
+    required: ["reaction", "user", "channel", "message_ts"],
   },
   output_parameters: {
     properties: {
@@ -40,7 +44,7 @@ export default SlackFunction(
     let message: string;
     let messageSent = false;
 
-    if (inputs.want_to_pair) {
+    if (inputs.reaction === "pear") {
       const uuid = crypto.randomUUID();
       const pairingObject = {
         user_id: inputs.user,
@@ -65,7 +69,7 @@ export default SlackFunction(
         console.error(`Error in Pairing function: ${error}`);
         message = "There was an error processing your request. Please try again later.";
       }
-    } else {
+    } else { // this will be an apple as only other reaction allowed
       console.log(`User ${inputs.user} does not want to pair.`);
       try {
         // Query for items with the user's ID
