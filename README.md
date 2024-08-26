@@ -1,3 +1,9 @@
+#🍐ing slack workflow
+
+2xworkflows to manage finding pairs of individuals who want to have a 1-on-1
+
+for contribution/installation follow the below steps from the slack workspace templates.
+
 # Deno Starter Template
 
 This is a scaffolded Deno template used to build out Slack apps using the Slack
