@@ -70,6 +70,13 @@ const sampleFunctionStep = SampleWorkflow.addStep(SampleFunctionDefinition, {
   user: SampleWorkflow.inputs.user,
 });
 
+const ephemeralMessage = SampleWorkflow.addStep(Schema.slack.functions.SendEphemeralMessage, {
+  channel_id: inputForm.outputs.fields.channel,
+  user_id: SampleWorkflow.inputs.user,
+  message:
+    `You request to be :pear:'d has been successfully logged. You will be :pear:'d with a random user tomorrow morning.`,
+});
+
 // /**
 //  * SendMessage is a Slack function. These are
 //  * Slack-native actions, like creating a channel or sending
