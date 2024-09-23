@@ -33,12 +33,12 @@ Attention i.AI team members! It's time for our weekly pairing session!
 *Changed your mind?*
 No worries! Just react with an :apple: to opt-out.
 
-Let's connect, collaborate, and create something amazing together! :rocket:
+Connect, collaborate, and create something amazing! :rocket:
   `.trim(),
 });
 
 const delayStep = PairingWorkflow.addStep(Schema.slack.functions.Delay, {
-  minutes_to_delay: 12 * 60,
+  minutes_to_delay: 24 * 60,
 });
 
 const customMessageStep = PairingWorkflow.addStep(CustomMessage, {

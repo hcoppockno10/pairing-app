@@ -86,9 +86,9 @@ export default SlackFunction(CustomMessage, async ({ inputs, client }) => {
     if (pair.length === 1) {
       text = `Hello <@${pair[0]}>! Unfortunately, there are no other available partners to :pear: with for this session.`;
     } else if (pair.length === 2) {
-      text = `Hello <@${pair[0]}> and <@${pair[1]}>! You've been :pear:'d for this programming session. Please reach out to each other and organise a time to meet!`;
+      text = `Hello <@${pair[0]}> and <@${pair[1]}>! You've been :pear:'d for this 1-on-1 session. Please reach out to each other and organise a time to meet!`;
     } else {
-      text = `Hello <@${pair[0]}>, <@${pair[1]}>, and <@${pair[2]}>! You've been bunched together for this programming session as there were an odd number of people. Please reach out to each other and organise a time to meet!`;
+      text = `Hello <@${pair[0]}>, <@${pair[1]}>, and <@${pair[2]}>! You've been bunched together for this :pair: session as there were an odd number of people. Please reach out to each other and organise a time to meet!`;
     }
     
     console.log("Debug - Message text:", text);
