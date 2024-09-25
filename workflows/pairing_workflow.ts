@@ -22,7 +22,7 @@ const pairingAnnouncementStep = PairingWorkflow.addStep(Schema.slack.functions.S
   message: `
 :pear: *Pairing Opportunity Alert!* :pear:
 
-Attention i.AI team members! It's time for our weekly pairing session!
+Attention i.AI team members! It's time for our weekly pairing session! These sessions are an oppurtunity to share knowledge, learn new skills, and collaborate with your peers.
 
 *How to participate:*
 1. :eyes: See this message
