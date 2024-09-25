@@ -27,7 +27,7 @@ Attention i.AI team members! It's time for our weekly pairing session!
 *How to participate:*
 1. :eyes: See this message
 2. React with a :pear: if you're interested
-3. :hourglass_flowing_sand: Wait 12 hours for the magic to happen
+3. :hourglass_flowing_sand: Wait 24 hours for the magic to happen
 4.Get :pear:ed with a random teammate
 
 *Changed your mind?*
