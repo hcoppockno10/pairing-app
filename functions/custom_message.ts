@@ -35,7 +35,7 @@ export const CustomMessage = DefineFunction({
 });
 
 export default SlackFunction(CustomMessage, async ({ inputs, client }) => {
-  const time_start = new Date(Date.now() - 12 * 60 * 60 * 1000);
+  const time_start = new Date(Date.now() - 24 * 60 * 60 * 1000);
   const time_end = new Date();
   
   // Querying datastore for stored messages
