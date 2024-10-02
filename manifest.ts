@@ -9,7 +9,7 @@ import SampleObjectDatastore from "./datastores/sample_datastore.ts";
  * https://api.slack.com/automation/manifest
  */
 export default Manifest({
-  name: "pairing-iai-members",
+  name: "pairing-aisi-members",
   description: "An app to manage pairing individuals from a team.",
   icon: "assets/pear.png",
   workflows: [PairingGetResponseWorkflow, PairingWorkflow],

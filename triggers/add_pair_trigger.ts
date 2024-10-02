@@ -13,7 +13,7 @@ const trigger: Trigger<typeof PairingGetResponseWorkflow.definition> = {
   workflow: `#/workflows/${PairingGetResponseWorkflow.definition.callback_id}`,
   inputs: {
     channel: {
-      value: `C06AEBEBLSG`,
+      value: `C0789HCV4CE`,
     },
     user: {
       value: TriggerContextData.Event.ReactionAdded.user_id,
@@ -27,7 +27,7 @@ const trigger: Trigger<typeof PairingGetResponseWorkflow.definition> = {
   },
   event: {
     event_type: TriggerEventTypes.ReactionAdded,
-    channel_ids: ["C06AEBEBLSG"],
+    channel_ids: ["C0789HCV4CE"],
     filter: {
       version: 1,
       root: {
