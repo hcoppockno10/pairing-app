@@ -13,7 +13,7 @@ const trigger: Trigger<typeof PairingWorkflow.definition> = {
     },
   },
   schedule: {
-    start_time: "2024-09-24T09:00:00Z",
+    start_time: "2024-10-02T10:00:00Z",
     end_time: "2037-12-31T23:59:59Z",
     frequency: { type: "weekly", repeats_every: 1 },
   },
