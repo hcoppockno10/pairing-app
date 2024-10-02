@@ -4,6 +4,11 @@
       "app_id": "A07JKLY1CUS",
       "team_domain": "i-dot-ai",
       "team_id": "T03DR9CLDHP"
+    },
+    "T05LY5RBKEZ": {
+      "app_id": "A07Q39CNT4L",
+      "team_domain": "aisafetyinstitute",
+      "team_id": "T05LY5RBKEZ"
     }
   },
   "default": "i-dot-ai"
